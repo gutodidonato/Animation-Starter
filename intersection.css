@@ -1,61 +1,158 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: red;
-  }
-  
-  .container {
-    height: 200vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .observed {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    opacity: 0;
-    transform: translate(0, 0); 
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .appear-from-black {
-    background-color: black;
-    transform: translateY(-100px); 
-  }
-  
-  .appear-from-black.show {
-    opacity: 1;
-    transform: translateY(0); 
-  }
-  
-  .fade-in.show {
-    background-color: skyblue;
-    opacity: 1; 
-  }
-  
-  .slide-from-bottom {
-    background-color: lightcoral;
-    transform: translateY(100px); 
-  }
-  
-  .slide-from-bottom.show {
-    transform: translateY(0); 
-    opacity: 1;
-  }
-  
-  /* Vindo da direita */
-  .slide-from-right {
-    background-color: lightgreen;
-    transform: translateX(100px); 
-  }
-  
-  .slide-from-right.show {
-    transform: translateX(0); 
-    opacity: 1;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(177, 177, 177);
+  margin-top: 60vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50vh;
+}
+
+.obv {
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  opacity: 0;
+  transform: translate(0, 0); 
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.appear-from-black {
+  background-color: black;
+  transform: translateY(-300px); 
+}
+
+.appear-from-black.show {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.fade-in.show {
+  background-color: rgb(255, 255, 255);
+  opacity: 1; 
+}
+
+.slide-from-bottom {
+  background-color: lightcoral;
+  transform: translateY(300px); 
+}
+
+.slide-from-bottom.show {
+  transform: translateY(0); 
+  opacity: 1;
+}
+
+.slide-from-right {
+  background-color: lightgreen;
+  transform: translateX(300px); 
+}
+
+.slide-from-right.show {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+.slide-from-left {
+  background-color: rgb(76, 0, 255);
+  transform: translateX(-300px); 
+}
+
+.slide-from-left.show {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+.slide-from-up {
+  background-color: rgb(255, 0, 0);
+  transform: translateY(-300px); 
+}
+
+.slide-from-up.show {
+  transform: translateY(0); 
+  opacity: 1;
+}
+
+/* Zoom in */
+.zoom-in {
+  background-color: lightblue;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.zoom-in.show {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Zoom out */
+.zoom-out {
+  background-color: lightgoldenrodyellow;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.zoom-out.show {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Rotate */
+.rotate {
+  background-color: lightpink;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.rotate.show {
+  transform: rotate(0deg);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Rotate with scaling */
+.rotate-scale {
+  background-color: lightseagreen;
+  transform: rotate(180deg) scale(0.5);
+  opacity: 0;
+}
+
+.rotate-scale.show {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Skew */
+.skew {
+  background-color: lightyellow;
+  transform: skew(20deg, 20deg);
+  opacity: 0;
+}
+
+.skew.show {
+  transform: skew(0deg, 0deg);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Slide and fade from top-right */
+.slide-from-top-right {
+  background-color: lightcyan;
+  transform: translate(300px, -300px);
+  opacity: 0;
+}
+
+.slide-from-top-right.show {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}

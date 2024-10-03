@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const observed = document.querySelectorAll('.observed');
+    const observed = document.querySelectorAll('.obv');
   
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
