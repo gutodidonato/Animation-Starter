@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: red;
+  }
+  
+  .container {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .observed {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    opacity: 0;
+    transform: translate(0, 0); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .appear-from-black {
+    background-color: black;
+    transform: translateY(-100px); 
+  }
+  
+  .appear-from-black.show {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
+  .fade-in.show {
+    background-color: skyblue;
+    opacity: 1; 
+  }
+  
+  .slide-from-bottom {
+    background-color: lightcoral;
+    transform: translateY(100px); 
+  }
+  
+  .slide-from-bottom.show {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+  
+  /* Vindo da direita */
+  .slide-from-right {
+    background-color: lightgreen;
+    transform: translateX(100px); 
+  }
+  
+  .slide-from-right.show {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+  
